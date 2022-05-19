@@ -21,7 +21,6 @@ public class Thermostat
     public boolean turnHeaterOn (ProgrammedSettings pSet)
     {
         int dTemp = pSet.getSetting(period, day);
-
         if (((curTemp < dTemp - thresholdDiff) ||
                 (override && curTemp < overTemp - thresholdDiff)) &&
                 (timeSinceLastRun > minLag))
